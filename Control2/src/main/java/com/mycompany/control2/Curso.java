@@ -12,7 +12,6 @@ public class Curso {
     private char Letra;
     private int Id;
     private int CantAlumnos;
-    private Alumno alumnos = new Alumno();
     private Alumno AlumnosCurso[] = new Alumno[27];
     
     
@@ -45,12 +44,13 @@ public class Curso {
         this.CantAlumnos = CantAlumnos;
     }
     
-    public void setAlumnosCurso(Alumno[]AlumnosCurso){
+    public void setAlumnosCurso(Alumno AlumnosCurso[]){
         this.AlumnosCurso= AlumnosCurso;
     }
     
+    
     public Alumno menorPromedio(){
-        Alumno menorProm;
+        Alumno menorProm = null;
         float prom;
         float menorNota = 0;
         for (int i = 0 ; i < AlumnosCurso.length ; i++){
@@ -59,13 +59,7 @@ public class Curso {
                 AlumnosCurso[i] = menorProm;
             }
         }
-        
         return menorProm;
     }
-    
-    
-    
-    
-    
-    
+
 }
