@@ -37,7 +37,7 @@ public class Colegio {
         this.CursosTotales = CursosTotales;
     }
     
-    Alumno [] cursosConAlumnosMenorPromedio(){
+    public Alumno [] cursosConAlumnosMenorPromedio(){
         
         Alumno alumnosMenorNotas [] = new Alumno[20];
         for(int i = 0 ; i < CursosTotales.length ; i++){
@@ -45,6 +45,6 @@ public class Colegio {
                 alumnosMenorNotas[j] = CursosTotales[i].menorPromedio();
             }
         }
-        
+        return alumnosMenorNotas;
     }
 }
